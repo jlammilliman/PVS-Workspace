@@ -1,0 +1,13 @@
+helloworld: THEORY
+  BEGIN 
+    posreal: TYPE = { r: real | r >=0 }
+    abs (x: real): posreal = IF x > 0 THEN x ELSE -x ENDIF
+
+    % @QED always_positive proved by jlamm on Tue, 25 Oct 2022 19:51:56 GMT
+    always_positive: THEOREM
+      FORALL (x: real): abs(x) >= 0
+    
+    % @QED always_positive_breakingChange proved by jlamm on Tue, 25 Oct 2022 19:39:10 GMT
+    % always_positive_breakingChange: THEOREM
+    %   FORALL (x: real): abs(x) > 0
+  END helloworld
